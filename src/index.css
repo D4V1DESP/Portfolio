@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: oklch(26.9% 0 0);
+    --color-secondary: oklch(37.1% 0 0);
+    --color-tertiary: oklch(87% 0 0);
+    --color-text-primary: #f9fafb;
+    --color-text-secondary: #9ca3af;
+    --color-text-tertiary: #b0b3c1;
+
+    --color-linkedin: #0077B5;
+}
