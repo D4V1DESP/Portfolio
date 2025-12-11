@@ -1,6 +1,8 @@
 import Navbar from '../components/Navbar'
 import Experience from '../components/Experience'
 import About from '../components/About'
+import Education from '../components/Education';
+import Certifications from '../components/Certifications';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faCopy } from '@fortawesome/free-solid-svg-icons';
@@ -14,7 +16,7 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <main class="py-16 px-6">
+      <main class="py-16 px-6 pb-10">
         <div>
           <div>
             <h1 class="font-semibold text-4xl">Hi, I'm David</h1>
@@ -51,6 +53,8 @@ export default function App() {
       </main>
       <Experience />
       <About />
+      <Education />
+      <Certifications />
     </>
   )
 }
