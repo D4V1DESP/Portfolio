@@ -3,6 +3,7 @@ import Experience from '../components/Experience'
 import About from '../components/About'
 import Education from '../components/Education';
 import Certifications from '../components/Certifications';
+import Skills from '../components/Skills';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faCopy } from '@fortawesome/free-solid-svg-icons';
@@ -55,6 +56,7 @@ export default function App() {
       <About />
       <Education />
       <Certifications />
+      <Skills />
     </>
   )
 }
