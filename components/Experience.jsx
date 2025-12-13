@@ -11,7 +11,7 @@ export default function WorkExperience() {
                     <div class="absolute -left-[5px] top-2 h-3 w-3 rounded-full bg-text-primary"></div>
                     <h4 class="font-light text-md text-text-tertiary pt-0.5">May 2025 - October 2025</h4>
                     <div class="flex items-center gap-2 py-2">
-                        <img src="/Repsol.jpeg" alt="Repsol" class="h-10 w-auto rounded-lg" />
+                        <img src="./Repsol.jpeg" alt="Repsol" class="h-10 w-auto rounded-lg" />
                         <h3 class="font-medium text-lg text-text-primary">REPSOL Internship (Talent Energy - Digitalization Scholarship)</h3>
                     </div><ul class="font-light text-text-secondary list-disc ml-5">
                         <li>Management of the digital project portfolio for the Iberia Mobility department.</li>
