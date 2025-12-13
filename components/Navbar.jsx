@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faSun, faMoon, faXmark, faBriefcase, faUser, faGraduationCap, faCode, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faSun, faMoon, faXmark, faBriefcase, faUser, faGraduationCap, faCode, faRocket } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navbar() {
 
@@ -46,7 +46,7 @@ export default function Navbar() {
                         </li>
                         <li class="flex-1">
                             <a href="#contact" class="flex flex-col items-center justify-center h-full w-full text-neutral-300 hover:text-white transition-colors p-2 rounded-lg focus:bg-neutral-600 focus:text-white">
-                                <FontAwesomeIcon icon={faEnvelope} className="text-lg" />
+                                <FontAwesomeIcon icon={faRocket} className="text-lg" />
                                 <span class="text-sm mt-1">Contact</span>
                             </a>
                         </li>

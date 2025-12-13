@@ -3,7 +3,7 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 export default function About() {
     return(
-        <section class="px-5 py-20">
+        <section class="px-5 py-20 pb-5">
             <div>
                 <div class="flex items-center gap-2 text-text-secondary">
                     <FontAwesomeIcon icon={faLocationDot} className="text-sm" />

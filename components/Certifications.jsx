@@ -29,7 +29,7 @@ export default function Certifications() {
 
 
     return(
-        <section class="px-5 py-5 mb-40 ">
+        <section class="px-5 py-5">
             <h3 class="font-semibold text-2xl text-text-primary">Certifications</h3>
             <div>
                 <Carousel>
