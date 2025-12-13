@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @plugin "@midudev/tailwind-animations";
+@plugin "tailwindcss-motion";
 
 @theme {
     --color-primary: oklch(26.9% 0 0);
