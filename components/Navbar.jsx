@@ -2,6 +2,14 @@ import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faSun, faMoon, faXmark, faBriefcase, faUser, faGraduationCap, faCode, faRocket } from '@fortawesome/free-solid-svg-icons';
 
+const navItems = [
+  { id: 'experience', icon: faBriefcase, label: 'Experience' },
+  { id: 'about', icon: faUser, label: 'About' },
+  { id: 'education', icon: faGraduationCap, label: 'Education' },
+  { id: 'skills', icon: faCode, label: 'Skills' },
+  { id: 'projects', icon: faRocket, label: 'Projects' }
+];
+
 export default function Navbar() {
 
     const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -19,37 +27,25 @@ export default function Navbar() {
                     </div>
                 </div>
                 <nav>
-                    <ul class="fixed bottom-0 left-0 w-full h-20 bg-secondary z-10 flex items-center p-2 md:hidden">
-                        <li class="flex-1">
-                            <a href="#experience" class="flex flex-col items-center justify-center h-full w-full text-neutral-300 hover:text-white transition-colors p-2 rounded-lg focus:bg-neutral-600 focus:text-white">
-                                <FontAwesomeIcon icon={faBriefcase} className="text-lg" />
-                                <span class="text-sm mt-1">Experience</span>
-                            </a>
-                        </li>
-                        <li class="flex-1">
-                            <a href="#about" class="flex flex-col items-center justify-center h-full w-full text-neutral-300 hover:text-white transition-colors p-2 rounded-lg focus:bg-neutral-600 focus:text-white">
-                                <FontAwesomeIcon icon={faUser} className="text-lg" />
-                                <span class="text-sm mt-1">About</span>
-                            </a>
-                        </li>
-                        <li class="flex-1">
-                            <a href="#education" class="flex flex-col items-center justify-center h-full w-full text-neutral-300 hover:text-white transition-colors p-2 rounded-lg focus:bg-neutral-600 focus:text-white">
-                                <FontAwesomeIcon icon={faGraduationCap} className="text-lg" />
-                                <span class="text-sm mt-1">Education</span>
-                            </a>
-                        </li>
-                        <li class="flex-1">
-                            <a href="#skills" class="flex flex-col items-center justify-center h-full w-full text-neutral-300 hover:text-white transition-colors p-2 rounded-lg focus:bg-neutral-600 focus:text-white">
-                                <FontAwesomeIcon icon={faCode} className="text-lg" />
-                                <span class="text-sm mt-1">Skills</span>
-                            </a>
-                        </li>
-                        <li class="flex-1">
-                            <a href="#contact" class="flex flex-col items-center justify-center h-full w-full text-neutral-300 hover:text-white transition-colors p-2 rounded-lg focus:bg-neutral-600 focus:text-white">
-                                <FontAwesomeIcon icon={faRocket} className="text-lg" />
-                                <span class="text-sm mt-1">Contact</span>
-                            </a>
-                        </li>
+                    <ul class="fixed bottom-0 left-0 w-full h-20 bg-secondary z-10 flex items-center p-2 md:hidden" style={{ scrollBehavior: 'smooth' }}>
+                        {navItems.map((item) => (
+                            <li key={item.id} class="flex-1">
+                                <a 
+                                    href={`#${item.id}`} 
+                                    class="flex flex-col items-center justify-center h-full w-full text-neutral-300 hover:text-white transition-colors p-2 rounded-lg focus:bg-neutral-600 focus:text-white" 
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        const targetElement = document.getElementById(item.id);
+                                        if (targetElement) {
+                                            targetElement.scrollIntoView({ behavior: 'smooth' });
+                                        }
+                                    }}
+                                >
+                                    <FontAwesomeIcon icon={item.icon} className="text-lg" />
+                                    <span class="text-sm mt-1">{item.label}</span>
+                                </a>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
             </div>

@@ -1,74 +1,17 @@
 import { useState, useRef } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { faNodeJs } from '@fortawesome/free-brands-svg-icons';
+import { technologies, frameworks, tools } from '../data/skillsData';
 
 export default function Skills() {
-
     const [isTechOpen, setIsTechOpen] = useState(false);
     const [isFrameworksOpen, setIsFrameworksOpen] = useState(false);
     const [isToolsOpen, setIsToolsOpen] = useState(false);
     const dropdownRef = useRef(null);
 
-    const technologies = [
-        {
-            icon: 'devicon-python-plain colored',
-            name: "Python",
-            description: "Versatile language for web, data, AI, and automation with excellent readability.",
-            category: ["Backend", "Data Science", "Automation"],
-            url : "https://www.python.org/"
-        },
-        {
-            icon: 'devicon-java-plain colored',
-            name: "Java",
-            description: "Versatile language for web, data, AI, and automation with excellent readability.",
-            category: ["Backend", "Data Science", "Automation"],
-            url : "https://www.java.com/"
-        },
-        {
-            icon: 'devicon-nodejs-plain colored',
-            name: "Node",
-            description: "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine that allows you to run JavaScript on the server-side.",
-            category: ["Backend"],
-            url : "https://nodejs.org/"
-        }
-    ]
-
-    const frameworks = [
-        {
-            icon: 'devicon-react-original colored',
-            name: "React",
-            description: "A JavaScript library for building user interfaces, developed by Facebook. It's used for building single-page applications with efficient UI rendering and component-based architecture.",
-            category: ["Frontend"],       
-            url : "https://reactjs.org/"
-        },
-        {
-            icon: 'devicon-angularjs-plain colored',
-            name: "Angular",
-            description: "Angular is a platform for building mobile and desktop web applications. It is developed by Google and is open source. It is written in TypeScript, a typed superset of JavaScript, and uses MVW (Model-View-Whatever) architecture.",
-            category: ["Frontend"],
-            url : "https://angular.io/"     
-        }
-    ]
-
-    const tools = [
-        {
-            icon: 'devicon-git-plain colored',
-            name: "Git",
-            description: "Git is a distributed version control system for source code management that facilitates collaboration among programmers.",
-            category: ["Version Control"],
-            url : "https://git-scm.com/"
-        },
-        {
-            icon: 'devicon-jira-plain colored',
-            name: "Jira",
-            description: "Jira is a proprietary issue tracking product developed by Atlassian that is used by companies all over the world for agile project management.",
-            category: ["Project Management"],
-            url : "https://www.atlassian.com/jira"
-        }
-    ]
-
     return (
-        <section class="px-5 py-5 pt-20 mb-100">
+        <section class="px-5 py-5 pt-20">
             <div>
                 <h2 class="font-semibold text-3xl text-text-primary">Skills</h2>
                 <p class="font-light text-md text-text-tertiary mb-5">Technologies, frameworks and tools I have worked with</p>
@@ -92,19 +35,19 @@ export default function Skills() {
                         {technologies.map((tech) => {
                             return(
                                 <a class="rounded-lg border border-gray-200/20 p-4 hover:bg-white/5 flex gap-4 mb-5" href={tech.url} target="_blank" rel="noopener noreferrer">
-                            <i class={`${tech.icon} text-4xl`}></i>
-                            <div class="space-y-1">
-                                <h4 class="text-l sm:text-l lg:text-xl font-semibold text-text-primary">{tech.name}</h4>
-                                <p class="text-sm sm:text-sm lg:text-sm mt-1 font-extralight text-text-secondary leading-relaxed">{tech.description}</p>
-                                <div class="flex flex-wrap gap-1.5 mt-1.5">
-                                    {tech.category.map((category) => {
-                                        return(
-                                            <span class="bg-back border border-gray-200/20 text-text-primary/80 text-xs sm:text-sm lg:text-xs font-light sm:font-normal lg:font-medium px-2 py-0.5 rounded-lg">{category}</span>
-                                        )
-                                    })}
-                                </div>
-                            </div>
-                        </a>
+                                    <i class={`${tech.icon} text-4xl`}></i>
+                                    <div class="space-y-1">
+                                        <h4 class="text-l sm:text-l lg:text-xl font-semibold text-text-primary">{tech.name}</h4>
+                                        <p class="text-sm sm:text-sm lg:text-sm mt-1 font-extralight text-text-secondary leading-relaxed">{tech.description}</p>
+                                        <div class="flex flex-wrap gap-1.5 mt-1.5">
+                                            {tech.category.map((category) => {
+                                                return(
+                                                    <span class="bg-back border border-gray-200/20 text-text-primary/80 text-xs sm:text-sm lg:text-xs font-light sm:font-normal lg:font-medium px-2 py-0.5 rounded-lg">{category}</span>
+                                                )
+                                            })}
+                                        </div>
+                                    </div>
+                                </a>
                             )
                         })}
                     </div>
