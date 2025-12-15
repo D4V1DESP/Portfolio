@@ -26,15 +26,15 @@ export default function App() {
       <Navbar handleSidebar={handleSidebar}/>
       <div class="flex-1 overflow-y-auto">
         <div class="max-w-[1000px] w-full mx-auto">
-      <main class="py-16 px-6 pb-10">
+      <main class="py-18 px-6 pb-10">
         <div>
           <div>
-            <h1 class="font-semibold text-4xl">Hi, I'm David</h1>
-            <p class="text-2xl font-medium text-text-secondary animate-pulse">A Software Engineer</p>
+            <h1 class="font-semibold text-4xl lg:text-6xl">Hi, I'm David</h1>
+            <p class="text-2xl font-medium text-text-secondary animate-pulse lg:text-4xl">A Software Engineer</p>
           </div>
           <div class="mt-4 text-text-primary text-sm font-medium flex gap-4">
             <a 
-              class="py-1 px-2.5 bg-linkedin rounded-lg hover:bg-linkedin/90 hover:scale-105 transition-all duration-200 flex items-center gap-1.5"
+              class="lg:py-2 lg:px-3 py-1 px-2.5 bg-linkedin rounded-lg hover:bg-linkedin/90 hover:scale-105 transition-all duration-200 flex items-center gap-1.5"
               href="https://linkedin.com/in/david-gomez-escobar"
               target="_blank"
               rel="noopener noreferrer"
@@ -43,7 +43,7 @@ export default function App() {
               <span>LinkedIn</span>
             </a>
             <a 
-              class="py-1 px-2.5 bg-[#2b3137] rounded-lg hover:bg-[#2b3137]/90 hover:scale-105 transition-all duration-200 flex items-center gap-1.5"
+              class="lg:py-2 lg:px-3 py-1 px-2.5 bg-[#2b3137] rounded-lg hover:bg-[#2b3137]/90 hover:scale-105 transition-all duration-200 flex items-center gap-1.5"
               href="https://github.com/D4V1DESP"
               target="_blank"
               rel="noopener noreferrer"
@@ -53,7 +53,7 @@ export default function App() {
             </a>
             <button
               id="email-button"
-              class="py-1 px-2.5 bg-[#BB001B] rounded-lg hover:bg-[#BB001B]/90 hover:scale-105 transition-all duration-200 flex items-center gap-1.5 cursor-pointer"
+              class="lg:py-2 lg:px-3 py-1 px-2.5 bg-[#BB001B] rounded-lg hover:bg-[#BB001B]/90 hover:scale-105 transition-all duration-200 flex items-center gap-1.5 cursor-pointer"
               onClick={async () => {
                 await navigator.clipboard.writeText("davidgoes77@gmail.com");
                 const button = document.getElementById("email-button");
@@ -88,7 +88,7 @@ export default function App() {
         <Projects />
       </section>
       <a href="https://github.com/D4V1DESP">
-        <h4 class="flex justify-center items-center gap-2 mb-25 text-text-secondary animate-pulse">
+        <h4 class="flex justify-center items-center gap-2 mb-25 lg:mb-10 text-text-secondary animate-pulse">
           <i class="devicon-github-plain text-sm"></i>See more projects...
         </h4>
       </a>

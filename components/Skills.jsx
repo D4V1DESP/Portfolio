@@ -13,15 +13,15 @@ export default function Skills() {
     return (
         <section class="px-5 py-5 pt-20">
             <div>
-                <h2 class="font-semibold text-3xl text-text-primary">Skills</h2>
-                <p class="font-light text-md text-text-tertiary mb-5">Technologies, frameworks and tools I have worked with</p>
+                <h2 class="font-semibold text-3xl text-text-primary lg:text-4xl">Skills</h2>
+                <p class="font-light text-md text-text-tertiary mb-5 lg:text-lg">Technologies, frameworks and tools I have worked with</p>
                 <div class="relative" ref={dropdownRef}>
                     <button 
                         onClick={() => setIsTechOpen(!isTechOpen)}
                         class={`flex justify-between items-center group relative border border-gray-200/20 text-text-primary/80 w-full max-w-[968px] text-start font-light py-4 px-4 rounded-lg text-md transition-all duration-300 ease-in-out hover:bg-white/10 hover:shadow-[0_0_0_1px_rgba(255,255,255,0.15)] hover:border-gray-300/20 cursor-pointer
                                 ${isTechOpen ? 'rounded-bl-none rounded-br-none border-b-0 bg-white/10' : 'rounded-lg'}`}
                     >
-                        Technologies
+                        <span class="lg:text-lg">Technologies</span>
                         <FontAwesomeIcon icon={faAngleDown} className={`w-4 h-4 transition-transform duration-200 ${isTechOpen ? 'rotate-180' : ''}`} />
                     </button>
                     <div 
@@ -32,6 +32,7 @@ export default function Skills() {
                             backgroundColor: 'var(--bg-secondary)'
                         }}
                     >
+                        <div class ="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
                         {technologies.map((tech) => {
                             return(
                                 <a class="rounded-lg border border-gray-200/20 p-4 hover:bg-white/5 flex gap-4 mb-5" href={tech.url} target="_blank" rel="noopener noreferrer">
@@ -50,6 +51,7 @@ export default function Skills() {
                                 </a>
                             )
                         })}
+                        </div>
                     </div>
                 </div>
 
@@ -59,7 +61,7 @@ export default function Skills() {
                         class={`mt-4 flex justify-between items-center group relative border border-gray-200/20 text-text-primary/80 w-full max-w-[968px] text-start font-light py-4 px-4 rounded-lg text-md transition-all duration-300 ease-in-out hover:bg-white/10 hover:shadow-[0_0_0_1px_rgba(255,255,255,0.15)] hover:border-gray-300/20 cursor-pointer
                                 ${isFrameworksOpen ? 'rounded-bl-none rounded-br-none border-b-0 bg-white/10' : 'rounded-lg'}`}
                     >
-                        Frameworks
+                        <span class="lg:text-lg">Frameworks</span>
                         <FontAwesomeIcon icon={faAngleDown} className={`w-4 h-4 transition-transform duration-200 ${isFrameworksOpen ? 'rotate-180' : ''}`} />
                     </button>
                     <div 
@@ -70,24 +72,26 @@ export default function Skills() {
                             backgroundColor: 'var(--bg-secondary)'
                         }}
                     >
+                        <div class ="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
                         {frameworks.map((fram) => {
                             return(
                                 <a class="rounded-lg border border-gray-200/20 p-4 hover:bg-white/5 flex gap-4 mb-5" href={fram.url} target="_blank" rel="noopener noreferrer">
-                            <i class={`${fram.icon} text-4xl`}></i>
-                            <div class="space-y-1">
-                                <h4 class="text-l sm:text-l lg:text-xl font-semibold text-text-primary">{fram.name}</h4>
-                                <p class="text-sm sm:text-sm lg:text-sm mt-1 font-extralight text-text-secondary leading-relaxed">{fram.description}</p>
-                                <div class="flex flex-wrap gap-1.5 mt-1.5">
-                                    {fram.category.map((category) => {
-                                        return(
-                                            <span class="bg-back border border-gray-200/20 text-text-primary/80 text-xs sm:text-sm lg:text-xs font-light sm:font-normal lg:font-medium px-2 py-0.5 rounded-lg">{category}</span>
-                                        )
-                                    })}
-                                </div>
-                            </div>
-                        </a>
+                                    <i class={`${fram.icon} text-4xl lg:text-6xl`}></i>
+                                    <div class="space-y-1">
+                                        <h4 class="text-l sm:text-l lg:text-xl font-semibold text-text-primary">{fram.name}</h4>
+                                        <p class="text-sm sm:text-sm lg:text-sm mt-1 font-extralight text-text-secondary leading-relaxed">{fram.description}</p>
+                                        <div class="flex flex-wrap gap-1.5 mt-1.5">
+                                            {fram.category.map((category) => {
+                                                return(
+                                                    <span class="bg-back border border-gray-200/20 text-text-primary/80 text-xs sm:text-sm lg:text-xs font-light sm:font-normal lg:font-medium px-2 py-0.5 rounded-lg">{category}</span>
+                                                )
+                                            })}
+                                        </div>
+                                    </div>
+                                </a>
                             )
                         })}
+                        </div>
                     </div>
                 </div>
 
@@ -97,7 +101,7 @@ export default function Skills() {
                         class={`mt-4 flex justify-between items-center group relative border border-gray-200/20 text-text-primary/80 w-full max-w-[968px] text-start font-light py-4 px-4 rounded-lg text-md transition-all duration-300 ease-in-out hover:bg-white/10 hover:shadow-[0_0_0_1px_rgba(255,255,255,0.15)] hover:border-gray-300/20 cursor-pointer
                                 ${isToolsOpen ? 'rounded-bl-none rounded-br-none border-b-0 bg-white/10' : 'rounded-lg'}`}
                     >
-                        Tools
+                        <span class="lg:text-lg">Tools</span>
                         <FontAwesomeIcon icon={faAngleDown} className={`w-4 h-4 transition-transform duration-200 ${isToolsOpen ? 'rotate-180' : ''}`} />
                     </button>
                     <div 
@@ -108,6 +112,7 @@ export default function Skills() {
                             backgroundColor: 'var(--bg-secondary)'
                         }}
                     >
+                        <div class ="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
                         {tools.map((tool) => {
                             return(
                                 <a class="rounded-lg border border-gray-200/20 p-4 hover:bg-white/5 flex gap-4 mb-5" href={tool.url} target="_blank" rel="noopener noreferrer">
@@ -126,6 +131,7 @@ export default function Skills() {
                         </a>
                             )
                         })}
+                        </div>
                     </div>
                 </div>
             </div>
