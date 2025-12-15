@@ -54,8 +54,8 @@ export default function Projects(){
             video : ""       
         },
         {
-            img : "./MueveTIC.png",
-            name : "TFG",
+            img : "./TFG.jpeg",
+            name : "Bachelor`s Thesis",
             description : "Bachelor's Thesis on Android security. Analyzes device data (permissions, network traffic, processes) to detect threats. A lightweight tool offering security insights for users and professionals.",
             categories : [
                 {
@@ -87,7 +87,7 @@ export default function Projects(){
             ],
             github : "https://github.com/D4V1DESP/TFG",
             demo : "",
-            video : ""      
+            video : "./VideoAmenazasAndroid.mp4"      
         },
     ]
 

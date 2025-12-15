@@ -36,10 +36,10 @@ export default function Skills() {
                         {technologies.map((tech) => {
                             return(
                                 <a class="rounded-lg border border-gray-200/20 p-4 hover:bg-white/5 flex gap-4 mb-5" href={tech.url} target="_blank" rel="noopener noreferrer">
-                                    <i class={`${tech.icon} text-4xl`}></i>
+                                    <i class={`${tech.icon} text-4xl lg:text-5xl`}></i>
                                     <div class="space-y-1">
                                         <h4 class="text-l sm:text-l lg:text-xl font-semibold text-text-primary">{tech.name}</h4>
-                                        <p class="text-sm sm:text-sm lg:text-sm mt-1 font-extralight text-text-secondary leading-relaxed">{tech.description}</p>
+                                        <p class="text-sm sm:text-sm lg:text-base mt-1 font-extralight text-text-secondary leading-relaxed">{tech.description}</p>
                                         <div class="flex flex-wrap gap-1.5 mt-1.5">
                                             {tech.category.map((category) => {
                                                 return(
@@ -76,10 +76,10 @@ export default function Skills() {
                         {frameworks.map((fram) => {
                             return(
                                 <a class="rounded-lg border border-gray-200/20 p-4 hover:bg-white/5 flex gap-4 mb-5" href={fram.url} target="_blank" rel="noopener noreferrer">
-                                    <i class={`${fram.icon} text-4xl lg:text-6xl`}></i>
+                                    <i class={`${fram.icon} text-4xl lg:text-4xl`}></i>
                                     <div class="space-y-1">
                                         <h4 class="text-l sm:text-l lg:text-xl font-semibold text-text-primary">{fram.name}</h4>
-                                        <p class="text-sm sm:text-sm lg:text-sm mt-1 font-extralight text-text-secondary leading-relaxed">{fram.description}</p>
+                                        <p class="text-sm sm:text-sm lg:text-base mt-1 font-extralight text-text-secondary leading-relaxed">{fram.description}</p>
                                         <div class="flex flex-wrap gap-1.5 mt-1.5">
                                             {fram.category.map((category) => {
                                                 return(
@@ -116,10 +116,10 @@ export default function Skills() {
                         {tools.map((tool) => {
                             return(
                                 <a class="rounded-lg border border-gray-200/20 p-4 hover:bg-white/5 flex gap-4 mb-5" href={tool.url} target="_blank" rel="noopener noreferrer">
-                            <i class={`${tool.icon} text-4xl`}></i>
+                            <i class={`${tool.icon} text-4xl lg:text-5xl`}></i>
                             <div class="space-y-1">
                                 <h4 class="text-l sm:text-l lg:text-xl font-semibold text-text-primary">{tool.name}</h4>
-                                <p class="text-sm sm:text-sm lg:text-sm mt-1 font-extralight text-text-secondary leading-relaxed">{tool.description}</p>
+                                <p class="text-sm sm:text-sm lg:text-base mt-1 font-extralight text-text-secondary leading-relaxed">{tool.description}</p>
                                 <div class="flex flex-wrap gap-1.5 mt-1.5">
                                     {tool.category.map((category) => {
                                         return(
