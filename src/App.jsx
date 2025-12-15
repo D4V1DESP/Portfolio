@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Navbar from '../components/Navbar'
 import Experience from '../components/Experience'
 import About from '../components/About'
@@ -12,11 +13,19 @@ import './App.css'
 
 export default function App() {
   
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
+  const handleSidebar = () => {
+    setIsCollapsed(!isCollapsed);
+  }
 
   return (
     <>
-      <Navbar />
+    <div class="flex flex-col lg:flex-row h-dvh overflow-hidden">
+      <div class={`transition-all duration-500 ease-in-out ${isCollapsed ? 'lg:w-16' : 'lg:w-60'} shrink-0`}></div>
+      <Navbar handleSidebar={handleSidebar}/>
+      <div class="flex-1 overflow-y-auto">
+        <div class="max-w-[1000px] w-full mx-auto">
       <main class="py-16 px-6 pb-10">
         <div>
           <div>
@@ -83,6 +92,9 @@ export default function App() {
           <i class="devicon-github-plain text-sm"></i>See more projects...
         </h4>
       </a>
+      </div>
+    </div>
+    </div>
     </>
   )
 }
