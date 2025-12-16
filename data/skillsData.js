@@ -75,14 +75,14 @@ export const frameworks = [
     {
         icon: 'devicon-react-original colored',
         name: "React",
-        description: "A JavaScript library for building user interfaces, developed by Facebook. It's used for building single-page applications with efficient UI rendering and component-based architecture.",
+        description: "A JavaScript library for building user interfaces. It's used for building single-page applications with efficient UI rendering and component-based architecture.",
         category: ["Frontend"],
         url: "https://reactjs.org/"
     },
     {
         icon: 'devicon-angularjs-plain colored',
         name: "Angular",
-        description: "Platform for building mobile and desktop web applications. Developed by Google and written in TypeScript.",
+        description: "Platform for building mobile and desktop web applications. Written in TypeScript.",
         category: ["Frontend"],
         url: "https://angular.io/"
     },
@@ -127,7 +127,7 @@ export const tools = [
     {
         icon: 'devicon-jira-plain colored',
         name: "Jira",
-        description: "Proprietary issue tracking product developed by Atlassian that is used for agile project management.",
+        description: "Project management tool for agile teams to plan, track, and manage software development.",
         category: ["Project Management"],
         url: "https://www.atlassian.com/software/jira"
     },
