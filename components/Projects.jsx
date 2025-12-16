@@ -95,21 +95,21 @@ export default function Projects(){
     return (
         <section class="px-5 py-5 pt-20">
             <div>
-                <h2 class="font-semibold text-3xl text-text-primary lg:text-4xl">Projects</h2>
+                <h2 class="font-semibold text-3xl text-text-primary dark:text-text-primary-dark lg:text-4xl">Projects</h2>
                 <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
                     {projects.map((project) => {
                         return (
-                            <div class="border border-gray-200/20 mt-4 rounded-xl overflow-hidden max-w-3xl hover:border-text-primary/80 transition-colors duration-300 ease-in-out">
+                            <div class="border  bg-black/5 border-black/20 dark:border-gray-200/20 mt-4 rounded-xl overflow-hidden max-w-3xl hover:border-text-primary/80 dark:hover:border-text-primary-dark/80 transition-colors duration-300 ease-in-out">
                                 <div class="overflow-hidden">
                                     <img class="w-full h-auto transition-transform duration-300 ease-in-out hover:scale-110" src={project.img} alt="MueveTIC Logo" />
                                 </div>
                                 <div class="p-4">
-                                    <h4 class="font-medium text-xl text-text-primary">{project.name}</h4>
-                                    <p class="font-extralight text-sm text-text-secondary">{project.description}</p>
+                                    <h4 class="font-medium text-xl text-text-primary dark:text-text-primary-dark">{project.name}</h4>
+                                    <p class="font-extralight text-sm text-text-secondary dark:text-text-secondary-dark">{project.description}</p>
                                     <div class="flex flex-wrap items-center gap-2 mt-2">
                                         {project.categories.map((category) => {
                                             return(
-                                                <span class="flex items-center gap-1 bg-back border border-gray-200/20 text-text-primary/80 text-xs sm:text-sm lg:text-xs font-light sm:font-normal lg:font-medium px-2 py-0.5 rounded-lg">
+                                                <span class="flex items-center gap-1 bg-back border border-black/20 dark:border-gray-200/20 text-text-primary/80 dark:text-text-primary-dark text-xs sm:text-sm lg:text-xs font-light sm:font-normal lg:font-medium px-2 py-0.5 rounded-lg">
                                                     <i class={`${category.icon} text-xs`}></i>
                                                     {category.name}
                                                 </span>
@@ -117,12 +117,12 @@ export default function Projects(){
                                         })}
                                     </div>
                                     <div class="flex items-center gap-2 mt-2">
-                                        {project.github && <a class="group border border-gray-200/20 p-2 rounded-lg text-text-secondary text-xs font-light hover:text-text-primary hover:bg-black/30 transition-colors duration-300 ease-in-out" href={project.github} target="_blank" rel="noopener noreferrer">
+                                        {project.github && <a class="group border border-black/20 dark:border-gray-200/20 p-2 rounded-lg text-text-secondary dark:text-text-secondary-dark text-xs font-light hover:text-text-primary dark:hover:text-text-primary-dark hover:bg-black/30 transition-colors duration-300 ease-in-out" href={project.github} target="_blank" rel="noopener noreferrer">
                                             <FontAwesomeIcon icon={faGithub} className="text-sm mr-1" />
                                             Github Repo
                                             <FontAwesomeIcon icon={faAngleDoubleRight} className="ml-1 group-hover:motion-preset-wobble motion-duration-600" />
                                         </a>}
-                                        {project.demo && <a class="group border border-gray-200/20 p-2 rounded-lg text-text-secondary text-xs font-light hover:text-text-primary hover:bg-black/30 transition-colors duration-300 ease-in-out" href={project.demo} target="_blank" rel="noopener noreferrer">
+                                        {project.demo && <a class="group border border-black/20 dark:border-gray-200/20 p-2 rounded-lg text-text-secondary dark:text-text-secondary-dark text-xs font-light hover:text-text-primary dark:hover:text-text-primary-dark hover:bg-black/30 transition-colors duration-300 ease-in-out" href={project.demo} target="_blank" rel="noopener noreferrer">
                                             <FontAwesomeIcon icon={faGlobe} className="text-sm mr-1" />
                                             Demo
                                             <FontAwesomeIcon icon={faAngleDoubleRight} className="ml-1 group-hover:motion-preset-wobble motion-duration-600" />
@@ -131,7 +131,7 @@ export default function Projects(){
                                             <>
                                                 <button 
                                                     onClick={() => setShowVideo(project.video)}
-                                                    class="group border border-gray-200/20 p-2 rounded-lg text-text-secondary text-xs font-light hover:text-text-primary hover:bg-black/30 transition-colors duration-300 ease-in-out cursor-pointer"
+                                                    class="group border border-black/20 dark:border-gray-200/20 p-2 rounded-lg text-text-secondary dark:text-text-secondary-dark text-xs font-light hover:text-text-primary dark:hover:text-text-primary-dark hover:bg-black/30 transition-colors duration-300 ease-in-out cursor-pointer"
                                                 >
                                                     <FontAwesomeIcon icon={faYoutube} className="text-sm mr-1" />
                                                     Video

@@ -1,14 +1,28 @@
 @import "tailwindcss";
 @plugin "@midudev/tailwind-animations";
 @plugin "tailwindcss-motion";
+@custom-variant dark (&:where(.dark, .dark *));
+
 
 @theme {
-    --color-primary: oklch(26.9% 0 0);
-    --color-secondary: oklch(37.1% 0 0);
-    --color-tertiary: oklch(87% 0 0);
-    --color-text-primary: #f9fafb;
-    --color-text-secondary: #9ca3af;
-    --color-text-tertiary: #b0b3c1;
+    /* Dark Theme (default) */
+    --color-primary-dark: oklch(26.9% 0 0);
+    --color-secondary-dark: oklch(37.1% 0 0);
+    --color-tertiary-dark: oklch(87% 0 0);
+    --color-text-primary-dark: #f9fafb;
+    --color-text-secondary-dark: #9ca3af;
+    --color-text-tertiary-dark: #b0b3c1;
+    --color-accent-dark: #60a5fa;
+    
+   /* Light Theme */
+    --color-primary: #FAFAFA;
+    --color-secondary: #E6E6E6;
+    --color-tertiary: #BDBDBD;
+    --color-text-primary: #111827;
+    --color-text-secondary: #4b5563;
+    --color-text-tertiary: #6b7280;
+    --color-accent: #3b82f6;
+
 
     --color-linkedin: #0077B5;
 }
