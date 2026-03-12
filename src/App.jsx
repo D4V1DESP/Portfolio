@@ -100,7 +100,7 @@ export default function App() {
       <section id="education" class="scroll-mt-20 animate-fade-in-up">
         <Education />
       </section>
-      <section id="certifications" class="hidden">
+      <section id="certifications" class="animate-fade-in-up">
         <Certifications />
       </section>
       <section id="skills" class="animate-fade-in-up">
