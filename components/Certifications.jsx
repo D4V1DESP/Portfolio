@@ -9,7 +9,28 @@ export default function Certifications() {
             date: "March 2026",
             issuer: "Scrimba",
             url: "https://scrimba.com/fullstack-path-c0fullstack;cert23wfboWopQTz9j116LTCBwFcJKnRHgZjvr6GouSMhngWgPbe"
-        }
+        },
+        {
+            img: "./Scrimba.webp",
+            title: "Backend Developer Path",
+            date: "April 2026",
+            issuer: "Scrimba",
+            url: "https://scrimba.com/the-backend-developer-path-c0tbi0l98f;cert2ffentAFNBC8sJDi5rpuYSH6fZ4uqEQn3Xoy8xzg1p8zPc"
+        },
+        {
+            img: "./Scrimba.webp",
+            title: "Advanced React",
+            date: "April 2026",
+            issuer: "Scrimba",
+            url: "https://scrimba.com/advanced-react-c02h;cert2JbLs3qgBFMPGDXFHsc3kHChnEEtSQHiQwotJq"
+        },
+        {
+            img: "./Scrimba.webp",
+            title: "Data Structures And Algorithms",
+            date: "April 2026",
+            issuer: "Scrimba",
+            url: "https://scrimba.com/data-structures-and-algorithms-c0shn6ckdm;cert2ffentAFNBC8sJDi5rpuYSEkRBTfJ3HETj4axQk9zEJHeo"
+        },
     ]
 
 
